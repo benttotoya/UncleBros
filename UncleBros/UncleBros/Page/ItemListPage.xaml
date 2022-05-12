@@ -27,6 +27,8 @@
                 <local:ItemListView Name="19"/>
                 <local:ItemListView Name="20"/>
                 <local:ItemListView Name="21"/>
+                <local:ItemListView Name="22"/>
+                <local:ItemListView Name="23"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
