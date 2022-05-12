@@ -4,8 +4,29 @@
              x:Class="UncleBros.Page.ItemListPage"
              xmlns:local="clr-namespace:UncleBros.View">
     <ContentPage.Content>
-        <StackLayout>
-        <local:ItemListView Name="123"/>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <local:ItemListView Name="01"/>
+                <local:ItemListView Name="02"/>
+                <local:ItemListView Name="03"/>
+                <local:ItemListView Name="04"/>
+                <local:ItemListView Name="05"/>
+                <local:ItemListView Name="06"/>
+                <local:ItemListView Name="07"/>
+                <local:ItemListView Name="08"/>
+                <local:ItemListView Name="09"/>
+                <local:ItemListView Name="10"/>
+                <local:ItemListView Name="11"/>
+                <local:ItemListView Name="12"/>
+                <local:ItemListView Name="13"/>
+                <local:ItemListView Name="14"/>
+                <local:ItemListView Name="15"/>
+                <local:ItemListView Name="16"/>
+                <local:ItemListView Name="17"/>
+                <local:ItemListView Name="18"/>
+                <local:ItemListView Name="19"/>
+                <local:ItemListView Name="20"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

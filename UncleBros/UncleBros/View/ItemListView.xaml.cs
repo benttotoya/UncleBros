@@ -14,9 +14,10 @@ namespace UncleBros.View
     {
         public ItemListView()
         {
-            pName.Text = "박동흠";
-            pName.Padding = new Thickness(3, 3, 3, 3);
             InitializeComponent();
+
+            pName.Text = "";
+            pName.Padding = new Thickness(3, 3, 3, 3);
         }
 
         public string Name
