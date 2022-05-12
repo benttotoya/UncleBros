@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
+        <Label FontSize="16" Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Learn more at "/>
+                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                        <Span Text="Learn more at "/>
+                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Item01" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item02" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item03" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item04" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item05" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item06" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item07" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item08" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item09" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item10" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item11" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item12" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item13" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item14" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item15" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item16" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item17" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item18" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item19" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item20" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item21" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item22" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item23" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item24" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item25" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item26" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item27" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item28" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item29" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item30" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item31" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item32" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item33" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item34" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item35" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item36" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item37" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item38" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item39" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item40" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item41" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item42" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item43" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item44" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item45" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item46" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item47" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item48" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item49" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+                <Label Text="Item50" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
+            </StackLayout>
+        </ScrollView>
+        
+    </StackLayout>
+
+</ContentPage>
