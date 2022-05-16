@@ -13,7 +13,8 @@ namespace UncleBros
 
             //MainPage = new MainPage();
             //MainPage = new ItemListPage();
-            MainPage = new AbsoluteLayoutPage();
+            //MainPage = new AbsoluteLayoutPage();
+            MainPage = new TableViewPage();
         }
 
         protected override void OnStart()

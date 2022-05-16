@@ -22,7 +22,7 @@
             </Label.FormattedText>
         </Label>
         <ScrollView>
-            <StackLayout>
+            <StackLayout Spacing="2">
                 <Label Text="Item01" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
                 <Label Text="Item02" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>
                 <Label Text="Item03" FontSize="20" VerticalOptions="CenterAndExpand" Padding="10"/>

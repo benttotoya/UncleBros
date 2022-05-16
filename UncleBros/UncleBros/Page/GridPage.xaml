@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.GridPage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="DarkGray" RowSpacing="20" ColumnSpacing="20" Padding="30">
+            <Button Grid.Row="0" Grid.Column="0" Text="Grid 0.0" BackgroundColor="#fff"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="Grid 0.1" BackgroundColor="#fff"/>
+            <Button Grid.Row="0" Grid.Column="2" Text="Grid 0.2" BackgroundColor="#fff"/>
+            
+            <Button Grid.Row="1" Grid.Column="0" Text="Grid 1.0" BackgroundColor="#fff"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="Grid 1.1" BackgroundColor="#fff"/>
+            <Button Grid.Row="1" Grid.Column="2" Text="Grid 1.1" BackgroundColor="#fff"/>
+            
+            <Button Grid.Row="2" Grid.Column="0" Text="Grid 2.0" BackgroundColor="#fff"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="Grid 2.1" BackgroundColor="#fff"/>
+            <Button Grid.Row="2" Grid.Column="2" Text="Grid 2.1" BackgroundColor="#fff"/>
+
+            <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="Grid 3.0" BackgroundColor="#fff"/>
+            <Button Grid.Row="3" Grid.Column="2" Text="Grid 3.2" BackgroundColor="#fff"/>
+
+            <Button Grid.Row="4" Grid.Column="0" Text="Grid 4.0" BackgroundColor="#fff"/>
+            <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="Grid 4.1" BackgroundColor="#fff"/>
+
+            <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Text="Grid 5.0" BackgroundColor="#fff"/>
+
+            <Button Grid.Row="6" Grid.Column="0" Grid.RowSpan="3" Text="Grid 6.0" BackgroundColor="#fff"/>
+            <Button Grid.Row="6" Grid.Column="1" Text="Grid 6.1" BackgroundColor="#fff"/>
+            <Button Grid.Row="6" Grid.Column="2" Text="Grid 6.2" BackgroundColor="#fff"/>
+
+            <Button Grid.Row="7" Grid.Column="1" Grid.RowSpan="2" Text="Grid 7.1" BackgroundColor="#fff"/>
+            <Button Grid.Row="7" Grid.Column="2" Text="Grid 7.2" BackgroundColor="#fff"/>
+
+            <Button Grid.Row="8" Grid.Column="2" Text="Grid 8.2" BackgroundColor="#fff"/>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
