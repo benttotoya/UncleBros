@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using UncleBros.View;
 
 namespace UncleBros.Page
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ItemListPage : ContentPage
+    public partial class AbsoluteLayoutPage : ContentPage
     {
-        public ItemListPage()
+        public AbsoluteLayoutPage()
         {
             InitializeComponent();
         }

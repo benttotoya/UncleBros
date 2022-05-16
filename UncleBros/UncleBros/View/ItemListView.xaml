@@ -3,8 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UncleBros.View.ItemListView">
   <ContentView.Content>
-      <StackLayout>
-          <Label x:Name="pName" Text="Item1" Padding="10" BackgroundColor="Orange"/>
+      <StackLayout Orientation="Horizontal">
+          <Label x:Name="pID" Padding="10" BackgroundColor="Orange"/>
+          <Label x:Name="pName" Padding="10" BackgroundColor="Orange"/>
+          <Label x:Name="pAge" Padding="10" BackgroundColor="Indigo"/>
+          <Label x:Name="pSex" Padding="10" BackgroundColor="Indigo"/>
+          <Label x:Name="pAddr" Padding="10" BackgroundColor="Indigo"/>
       </StackLayout>
   </ContentView.Content>
 </ContentView>

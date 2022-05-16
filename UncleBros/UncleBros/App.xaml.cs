@@ -12,7 +12,8 @@ namespace UncleBros
             InitializeComponent();
 
             //MainPage = new MainPage();
-            MainPage = new ItemListPage();
+            //MainPage = new ItemListPage();
+            MainPage = new AbsoluteLayoutPage();
         }
 
         protected override void OnStart()

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.AbsoluteLayoutPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Label Text="Mint" AbsoluteLayout.LayoutBounds="300, 50, 100, 50" AbsoluteLayout.LayoutFlags="None" BackgroundColor="#00ffff" />
+            <Label Text="Red" AbsoluteLayout.LayoutBounds="10, 50, 200, 100" AbsoluteLayout.LayoutFlags="None" BackgroundColor="#ff0000" />
+            <Label Text="Green" AbsoluteLayout.LayoutBounds="210, 150, 100, 200" AbsoluteLayout.LayoutFlags="None" BackgroundColor="#00ff00" />
+            <Label Text="Blue" AbsoluteLayout.LayoutBounds="110, 350, 100, 150" AbsoluteLayout.LayoutFlags="None" BackgroundColor="#0000ff" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
