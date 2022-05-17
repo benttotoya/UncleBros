@@ -16,5 +16,14 @@ namespace UncleBros.Page
         {
             InitializeComponent();
         }
+
+        private void Environment_SwitchCell_OnChanged(object sender, ToggledEventArgs e)
+        {
+            var select = sender as SwitchCell;
+            if (select.On == true)
+            {
+
+            }
+        }
     }
 }
