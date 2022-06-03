@@ -1,8 +1,119 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localViewModel="clr-namespace:UncleBros.ViewModel"
              x:Class="UncleBros.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <!-- Color -->
+            <Color x:Key="AppColorBlack">#000</Color>
+            <Color x:Key="AppColorGray">#aaa</Color>
+            <Color x:Key="AppColorRed">#f00</Color>
+            <Color x:Key="AppColorBrown">#800</Color>
+            <Color x:Key="AppColorBlackBrown">#500</Color>
+            <Color x:Key="AppColorGreen">#0f0</Color>
+            <Color x:Key="AppColorBlue">#00f</Color>
+            <Color x:Key="AppColorBlackBlue">#00a</Color>
+            <Color x:Key="AppColorSky">#08f</Color>
+            <Color x:Key="AppColorYellow">#ff0</Color>
+            <Color x:Key="AppColorDarkYellow">#fC0</Color>
+            <Color x:Key="AppColorWater">#0ff</Color>
+            <Color x:Key="AppColorPink">#f0f</Color>
+            <Color x:Key="AppColorWhite">#fff</Color>
 
+            <!-- FontSize -->
+            <x:Double x:Key="AppFontSize30">30</x:Double>
+            <x:Double x:Key="AppFontSize25">25</x:Double>
+            <x:Double x:Key="AppFontSize20">20</x:Double>
+            <x:Double x:Key="AppFontSize15">15</x:Double>
+            <x:Double x:Key="AppFontSize10">10</x:Double>
+
+            <!-- FontAttribute -->
+            <FontAttributes x:Key="AppFontAttributeBold">Bold</FontAttributes>
+            <FontAttributes x:Key="AppFontAttributeItalic">Italic</FontAttributes>
+            <FontAttributes x:Key="AppFontAttributeBoldItalic">Bold, Italic</FontAttributes>
+
+            <!-- Thickness -->
+            <Thickness x:Key="AppPadding30">30</Thickness>
+            <Thickness x:Key="AppPadding25">25</Thickness>
+            <Thickness x:Key="AppPadding20">20</Thickness>
+            <Thickness x:Key="AppPadding15">15</Thickness>
+            <Thickness x:Key="AppPadding10">10</Thickness>
+
+            <Thickness x:Key="AppPaddingTitle">5, 5, 5, 5</Thickness>
+            <Thickness x:Key="AppPaddingSubTitle">10, 5, 5, 5</Thickness>
+            <Thickness x:Key="AppPaddingContents">20, 5, 5, 5</Thickness>
+
+            <Thickness x:Key="AppPaddingTitleReverse">5, 5, 5, 5</Thickness>
+            <Thickness x:Key="AppPaddingSubTitleReverse">5, 5, 10, 5</Thickness>
+            <Thickness x:Key="AppPaddingContentsReverse">5, 5, 20, 5</Thickness>
+
+            <!-- Style -->
+            <Style x:Key="AppTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Key=AppColorWhite}"/>
+                <Setter Property="FontSize" Value="{StaticResource Key=AppFontSize30}"/>
+                <Setter Property="FontAttributes" Value="{StaticResource Key=AppFontAttributeBold}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=AppColorRed}"/>
+                <Setter Property="Padding" Value="{StaticResource Key=AppPaddingTitle}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            </Style>
+            <Style x:Key="AppSubTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Key=AppColorWhite}"/>
+                <Setter Property="FontSize" Value="{StaticResource Key=AppFontSize25}"/>
+                <Setter Property="FontAttributes" Value="{StaticResource Key=AppFontAttributeBold}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=AppColorBrown}"/>
+                <Setter Property="Padding" Value="{StaticResource Key=AppPaddingSubTitle}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            </Style>
+            <Style x:Key="AppContentsStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Key=AppColorWhite}"/>
+                <Setter Property="FontSize" Value="{StaticResource Key=AppFontSize15}"/>
+                <Setter Property="FontAttributes" Value="{StaticResource Key=AppFontAttributeItalic}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=AppColorBlackBrown}"/>
+                <Setter Property="Padding" Value="{StaticResource Key=AppPaddingContents}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            </Style>
+            <Style x:Key="AppArticleMoreButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource Key=AppColorBlack}"/>
+                <Setter Property="FontSize" Value="{StaticResource Key=AppFontSize15}"/>
+                <Setter Property="FontAttributes" Value="{StaticResource Key=AppFontAttributeBold}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=AppColorWater}"/>
+                <Setter Property="Padding" Value="{StaticResource Key=AppPadding10}"/>
+                <Setter Property= "HorizontalOptions" Value="StartAndExpand" />
+            </Style>
+
+            <Style x:Key="AppTitleReverseStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Key=AppColorWhite}"/>
+                <Setter Property="FontSize" Value="{StaticResource Key=AppFontSize30}"/>
+                <Setter Property="FontAttributes" Value="{StaticResource Key=AppFontAttributeBold}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=AppColorRed}"/>
+                <Setter Property="Padding" Value="{StaticResource Key=AppPaddingTitleReverse}"/>
+                <Setter Property="HorizontalTextAlignment" Value="End"/>
+            </Style>
+            <Style x:Key="AppSubTitleReverseStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Key=AppColorWhite}"/>
+                <Setter Property="FontSize" Value="{StaticResource Key=AppFontSize25}"/>
+                <Setter Property="FontAttributes" Value="{StaticResource Key=AppFontAttributeBold}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=AppColorBrown}"/>
+                <Setter Property="Padding" Value="{StaticResource Key=AppPaddingSubTitleReverse}"/>
+                <Setter Property="HorizontalTextAlignment" Value="End"/>
+            </Style>
+            <Style x:Key="AppContentsReverseStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Key=AppColorWhite}"/>
+                <Setter Property="FontSize" Value="{StaticResource Key=AppFontSize15}"/>
+                <Setter Property="FontAttributes" Value="{StaticResource Key=AppFontAttributeItalic}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=AppColorBlackBrown}"/>
+                <Setter Property="Padding" Value="{StaticResource Key=AppPaddingContentsReverse}"/>
+                <Setter Property="HorizontalTextAlignment" Value="End"/>
+            </Style>
+            <Style x:Key="AppArticleMoreButtonReverseStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource Key=AppColorBlack}"/>
+                <Setter Property="FontSize" Value="{StaticResource Key=AppFontSize15}"/>
+                <Setter Property="FontAttributes" Value="{StaticResource Key=AppFontAttributeBold}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=AppColorWater}"/>
+                <Setter Property="Padding" Value="{StaticResource Key=AppPadding10}"/>
+                <Setter Property= "HorizontalOptions" Value="EndAndExpand" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

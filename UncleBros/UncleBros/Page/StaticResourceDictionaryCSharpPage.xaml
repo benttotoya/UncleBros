@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.StaticResourceDictionaryCSharpPage"
+             xmlns:localclass="clr-namespace:UncleBros.Model"
+            Padding="10">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#ff0">
+            <Label x:Name="label01"
+                   Text="Hello Xamarin"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="{x:Static localclass:StaticResource.BackgroundColorRed}"
+                   Padding="{x:Static localclass:StaticResource.PaddingBig}"
+                   FontAttributes="{x:Static localclass:StaticResource.FontAttributesBold}"
+                   FontSize="{x:Static localclass:StaticResource.FontSizeBig}"
+                   TextColor="{x:Static localclass:StaticResource.TextColorGray}"/>
+            <Button x:Name="btn01"
+                    Text="BUTTON1"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="{x:Static localclass:StaticResource.BackgroundColorRed}"
+                    Padding="{x:Static localclass:StaticResource.PaddingBig}"
+                    FontAttributes="{x:Static localclass:StaticResource.FontAttributesBold}"
+                    FontSize="{x:Static localclass:StaticResource.FontSizeBig}"
+                    TextColor="{x:Static localclass:StaticResource.TextColorGray}"/>
+
+            <Label x:Name="label02"
+                   Text="Hello Xamarin"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="{x:Static localclass:StaticResource.BackgroundColorGreen}"
+                   Padding="{x:Static localclass:StaticResource.PaddingMiddle}"
+                   FontAttributes="{x:Static localclass:StaticResource.FontAttributesItalic}"
+                   FontSize="{x:Static localclass:StaticResource.FontSizeMiddle}"
+                   TextColor="{x:Static localclass:StaticResource.TextColorGray}"/>
+            <Button x:Name="btn02"
+                    Text="BUTTON2"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="{x:Static localclass:StaticResource.BackgroundColorGreen}"
+                    Padding="{x:Static localclass:StaticResource.PaddingMiddle}"
+                    FontAttributes="{x:Static localclass:StaticResource.FontAttributesItalic}"
+                    FontSize="{x:Static localclass:StaticResource.FontSizeMiddle}"
+                    TextColor="{x:Static localclass:StaticResource.TextColorGray}"/>
+
+            <Label x:Name="label03"
+                   Text="Hello Xamarin"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="{x:Static localclass:StaticResource.BackgroundColorBlue}"
+                   Padding="{x:Static localclass:StaticResource.PaddingSmall}"
+                   FontAttributes="{x:Static localclass:StaticResource.FontAttributesBoldItalic}"
+                   FontSize="{x:Static localclass:StaticResource.FontSizeSmall}"
+                   TextColor="{x:Static localclass:StaticResource.TextColorGray}"/>
+            <Button x:Name="btn03"
+                    Text="BUTTON3"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="{x:Static localclass:StaticResource.BackgroundColorBlue}"
+                    Padding="{x:Static localclass:StaticResource.PaddingSmall}"
+                    FontAttributes="{x:Static localclass:StaticResource.FontAttributesBoldItalic}"
+                    FontSize="{x:Static localclass:StaticResource.FontSizeSmall}"
+                    TextColor="{x:Static localclass:StaticResource.TextColorGray}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

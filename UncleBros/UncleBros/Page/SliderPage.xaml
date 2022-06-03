@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.SliderPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Slider Value(0 ~ 100)"/>
+            <Entry x:Name="entrySlider01"  Placeholder="Slider Value" />
+            <Slider x:Name="Slider01"  ValueChanged="Slider01_ValueChanged" Minimum="0" Maximum="100"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

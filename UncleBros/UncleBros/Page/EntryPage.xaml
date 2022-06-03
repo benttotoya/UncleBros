@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.EntryPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="이름" FontSize="20"/>
+            <Entry x:Name="eName" Keyboard="Default" />
+
+            <Label Text="ID" FontSize="20"/>
+            <Entry x:Name="eID" Keyboard="Text" />
+
+            <Label Text="E-Mail" FontSize="20"/>
+            <Entry x:Name="eEMail" Keyboard="Email" />
+
+            <Label Text="전화번호" FontSize="20"/>
+            <Entry x:Name="ePhone" Keyboard="Telephone" />
+
+            <Label Text="차트" FontSize="20"/>
+            <Entry x:Name="eChat" Keyboard="Chat" />
+
+            <Label Text="숫자" FontSize="20"/>
+            <Entry x:Name="eNumeric" Keyboard="Numeric" />
+
+            <Label Text="플레인" FontSize="20"/>
+            <Entry x:Name="ePlain" Keyboard="Plain" />
+
+            <Label Text="홈페이지" FontSize="20"/>
+            <Entry x:Name="eHomePage" Keyboard="Url" />
+
+            <Button x:Name="btnName" Text="Confirm" Clicked="btnName_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

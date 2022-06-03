@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.EditorPage"
+             BackgroundColor="Gray">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Editor x:Name="editSubject"
+                BackgroundColor="#ffff00"
+                TextColor="#000"
+                FontAttributes="Bold"
+                Keyboard="Text"
+                Placeholder="Input your subject.">
+            </Editor>
+            <Editor x:Name="editMessage"
+                BackgroundColor="Beige"
+                TextColor="#000"
+                Keyboard="Text"
+                VerticalOptions="FillAndExpand"
+                Placeholder="Input your message.">
+            </Editor>
+            <Button Text="확인" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

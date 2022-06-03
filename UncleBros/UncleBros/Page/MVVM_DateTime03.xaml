@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localViewModel="clr-namespace:UncleBros.ViewModel"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="UncleBros.Page.MVVM_DateTime03">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <localViewModel:CurrentTimeViewModel x:Key="currentTimeViewModel"/>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <StackLayout BindingContext="{x:StaticResource currentTimeViewModel}">
+                <Label Text="{Binding Source={x:StaticResource currentTimeViewModel}, Path=DateTime}"
+                       FontSize="29"
+                       TextColor="{StaticResource Key=AppColorBlack}"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding Path=DateTime.Year, StringFormat='The Year is {0}'}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding Path=DateTime.Month, StringFormat='The Month is {0}'}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding Path=DateTime.Day, StringFormat='The Day is {0}'}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding Path=DateTime, StringFormat='The Time is {0:T}'}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

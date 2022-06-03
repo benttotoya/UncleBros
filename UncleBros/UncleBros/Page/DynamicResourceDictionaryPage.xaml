@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.DynamicResourceDictionaryPage"
+             Padding="10">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="DRColorRed">#f00</Color>
+            <x:Double x:Key="DRFont20">20</x:Double>
+            <x:Double x:Key="DRFont15">15</x:Double>
+            <x:Double x:Key="DRPadding30">30</x:Double>
+            <x:Double x:Key="DRPadding20">20</x:Double>
+            <x:Double x:Key="DRPadding10">10</x:Double>
+
+            <x:Double x:Key="DRButtonMargin">10</x:Double>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{DynamicResource Key=AppColorYellow}">
+            <Label
+                x:Name="lblTopLabel"
+                Text="Hello Xamarin"
+                TextColor="{StaticResource Key=AppColorWhite}"
+                FontSize="{DynamicResource Key=AppFontSize30}"
+                Padding="{DynamicResource Key=AppPadding20}"
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                BackgroundColor="{StaticResource Key=AppColorGreen}"/>
+
+            <Label
+                    Text="BackgroundColor"
+                    TextColor="{DynamicResource Key=AppColorGray}"
+                    FontSize="{DynamicResource Key=DRFont20}"
+                    HorizontalTextAlignment="Start"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button
+                    x:Name="btnBGColorRed"
+                    Text="RED"
+                    BackgroundColor="{DynamicResource Key=AppColorGray}"
+                    Margin="{DynamicResource Key=DRButtonMargin}"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButton_Clicked"/>
+                <Button
+                    x:Name="btnBGColorGreen"
+                    Text="GREEN"
+                    BackgroundColor="{DynamicResource Key=AppColorGray}"
+                    Margin="{DynamicResource Key=DRButtonMargin}"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButton_Clicked"/>
+                <Button
+                    x:Name="btnBGColorBlue"
+                    Text="BLUE"
+                    BackgroundColor="{DynamicResource Key=AppColorGray}"
+                    Margin="{DynamicResource Key=DRButtonMargin}"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButton_Clicked"/>
+            </StackLayout>
+
+            <Label
+                    Text="Padding"
+                    TextColor="{DynamicResource Key=AppColorGray}"
+                    FontSize="{DynamicResource Key=DRFont20}"
+                    HorizontalTextAlignment="Start"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button
+                    x:Name="btnPaddingBig"
+                    Text="BIG"
+                    BackgroundColor="{StaticResource Key=AppColorGray}"
+                    Margin="{DynamicResource Key=DRButtonMargin}"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButton_Clicked"/>
+                <Button
+                    x:Name="btnPaddingMiddle"
+                    Text="MIDDLE"
+                    BackgroundColor="{DynamicResource Key=AppColorGray}"
+                    Margin="{DynamicResource Key=DRButtonMargin}" 
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButton_Clicked"/>
+                <Button
+                    x:Name="btnPaddingSmall"
+                    Text="SMALL"
+                    BackgroundColor="{DynamicResource Key=AppColorGray}"
+                    Margin="{DynamicResource Key=DRButtonMargin}"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButton_Clicked"/>
+            </StackLayout>
+
+            <Label
+                    Text="Font Size"
+                    TextColor="{DynamicResource Key=AppColorGray}"
+                    FontSize="{DynamicResource Key=DRFont20}"
+                    HorizontalTextAlignment="Start"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button
+                    x:Name="btnFontSizeBig"
+                    Text="BIG"
+                    BackgroundColor="{DynamicResource Key=AppColorGray}"
+                    Margin="{DynamicResource Key=DRButtonMargin}"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButton_Clicked"/>
+                <Button
+                    x:Name="btnFontSizeMiddle"
+                    Text="MIDDLE"
+                    BackgroundColor="{DynamicResource Key=AppColorGray}"
+                    Margin="{DynamicResource Key=DRButtonMargin}" 
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButton_Clicked"/>
+                <Button
+                    x:Name="btnFontSizeSmall"
+                    Text="SMALL"
+                    BackgroundColor="{DynamicResource Key=AppColorGray}"
+                    Margin="{DynamicResource Key=DRButtonMargin}"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButton_Clicked"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

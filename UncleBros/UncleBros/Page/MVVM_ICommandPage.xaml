@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.MVVM_ICommandPage"
+             xmlns:localViewModel="clr-namespace:UncleBros.ViewModel"
+             BackgroundColor="#777"
+             Padding="30">
+    <ContentPage.BindingContext>
+        <localViewModel:CommandTemperatureViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        
+        <StackLayout>
+            
+            <StackLayout Padding="0, 20, 0 ,0">
+                <Label Text="Device #01 : Enter the temperature you want."
+                   FontSize="18"
+                   TextColor="#fff"
+                   HorizontalOptions="StartAndExpand" />
+                
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="-"
+                            FontSize="10"
+                            FontAttributes="Bold"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center"
+                            Command="{Binding DecreaseCommandForDev01Temp}"/>
+                    <Label Text="{Binding Dev01Temp}"
+                           TextColor="{Binding LabelColor1}"
+                           FontAttributes="Bold"
+                           FontSize="20"
+                           Margin="10"
+                           HorizontalTextAlignment="Center" 
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"
+                           BackgroundColor="#fff"/>
+                    <Button Text="+"
+                            FontSize="10"
+                            FontAttributes="Bold"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center"
+                            Command="{Binding IncreaseCommandForDev01Temp}"/>
+                    <Button Text="ENTER"
+                            FontSize="10"
+                            FontAttributes="Bold"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Padding="0, 20, 0 ,0">
+                <Label Text="Device #01 : Enter the temperature you want."
+                   FontSize="18"
+                   TextColor="#fff"
+                   HorizontalOptions="StartAndExpand" />
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="-"
+                            FontSize="10"
+                            FontAttributes="Bold"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center"
+                            Command="{Binding DecreaseCommandForDev02Temp}"/>
+                    <Label Text="{Binding Dev02Temp}"
+                           TextColor="{Binding LabelColor2}"
+                           FontAttributes="Bold"
+                           FontSize="20"
+                           Margin="10"
+                           HorizontalTextAlignment="Center" 
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"
+                           BackgroundColor="#fff"/>
+                    <Button Text="+"
+                            FontSize="10"
+                            FontAttributes="Bold"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center"
+                            Command="{Binding IncreaseCommandForDev02Temp}"/>
+                    <Button Text="ENTER"
+                            FontSize="10"
+                            FontAttributes="Bold"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.MVVM_Interactive2Page"
+             xmlns:localViewModel="clr-namespace:UncleBros.ViewModel"
+             Padding="20"
+             BackgroundColor="#777">
+    <ContentPage.BindingContext>
+        <localViewModel:BoxColorChangeViewModel BoxColor="Aqua"/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <localViewModel:BoxColorChangeViewModel x:Key="boxColorChangeViewModel"/>
+            <localViewModel:BoxColorChangeViewModel x:Key="boxColorChangeViewModel2"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <StackLayout>
+                    <BoxView Color="{Binding BoxColor, Mode=TwoWay}"
+                     BackgroundColor="#333"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"/>
+
+                    <Label Text="{Binding Hue, StringFormat='Hue : {0:F1}'}"
+                   Padding="0, 20, 0, 0"
+                   HorizontalTextAlignment="Start" />
+                    <Slider Value="{Binding Hue, Mode=TwoWay}" />
+
+                    <Label Text="{Binding Hue, StringFormat='Saturation : {0:F1}'}"
+                   Padding="0, 20, 0, 0"
+                   HorizontalTextAlignment="Start" />
+                    <Slider Value="{Binding Saturation, Mode=TwoWay}" />
+
+                    <Label Text="{Binding Hue, StringFormat='Luminosity : {0:F1}'}"
+                   Padding="0, 20, 0, 0"
+                   HorizontalTextAlignment="Start" />
+                    <Slider Value="{Binding Luminosity, Mode=TwoWay}" />
+
+                    <Label Text="{Binding Hue, StringFormat='Alpha : {0:F1}'}"
+                   Padding="0, 20, 0, 0"
+                   HorizontalTextAlignment="Start" />
+                    <Slider Value="{Binding Alpha, Mode=TwoWay}" />
+                </StackLayout>
+
+                <StackLayout Padding="0, 50, 0, 0">
+                    <BoxView Color="{Binding Source={x:StaticResource boxColorChangeViewModel}, Path=BoxColor, Mode=TwoWay}"
+                     BackgroundColor="#333"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"/>
+
+                    <Label Text="{Binding Source={x:StaticResource boxColorChangeViewModel}, Path=Hue, StringFormat='Heu : {0:F2}'}"
+                   Padding="0, 20, 0, 0"
+                   HorizontalTextAlignment="Start" />
+                    <Slider Value="{Binding Source={x:StaticResource boxColorChangeViewModel}, Path=Hue, Mode=TwoWay}" />
+
+                    <Label Text="{Binding Source={x:StaticResource boxColorChangeViewModel}, Path=Saturation, StringFormat='Saturation : {0:F2}'}"
+                   Padding="0, 20, 0, 0"
+                   HorizontalTextAlignment="Start" />
+                    <Slider Value="{Binding Source={x:StaticResource boxColorChangeViewModel}, Path=Saturation, Mode=TwoWay}" />
+
+                    <Label Text="{Binding Source={x:StaticResource boxColorChangeViewModel}, Path=Luminosity, StringFormat='Luminosity : {0:F2}'}"
+                   Padding="0, 20, 0, 0"
+                   HorizontalTextAlignment="Start" />
+                    <Slider Value="{Binding Source={x:StaticResource boxColorChangeViewModel}, Path=Luminosity, Mode=TwoWay}" />
+
+                    <Label Text="{Binding Source={x:StaticResource boxColorChangeViewModel}, Path=Alpha, StringFormat='Alpha : {0:F2}'}"
+                   Padding="0, 20, 0, 0"
+                   HorizontalTextAlignment="Start" />
+                    <Slider Value="{Binding Source={x:StaticResource boxColorChangeViewModel}, Path=Alpha, Mode=TwoWay}" />
+                </StackLayout>
+
+                <StackLayout Padding="0, 50, 0, 0">
+                    <BoxView Color="{Binding Source={x:StaticResource boxColorChangeViewModel2}, Path=BoxColor, Mode=TwoWay}"
+                     BackgroundColor="#333"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"/>
+
+                    <Label Text="{Binding Source={x:StaticResource boxColorChangeViewModel2}, Path=Hue, StringFormat='Heu : {0:F3}'}"
+                   Padding="0, 20, 0, 0"
+                   HorizontalTextAlignment="Start" />
+                    <Slider Value="{Binding Source={x:StaticResource boxColorChangeViewModel2}, Path=Hue, Mode=TwoWay}" />
+
+                    <Label Text="{Binding Source={x:StaticResource boxColorChangeViewModel2}, Path=Saturation, StringFormat='Saturation : {0:F3}'}"
+                   Padding="0, 20, 0, 0"
+                   HorizontalTextAlignment="Start" />
+                    <Slider Value="{Binding Source={x:StaticResource boxColorChangeViewModel2}, Path=Saturation, Mode=TwoWay}" />
+
+                    <Label Text="{Binding Source={x:StaticResource boxColorChangeViewModel2}, Path=Luminosity, StringFormat='Luminosity : {0:F3}'}"
+                   Padding="0, 20, 0, 0"
+                   HorizontalTextAlignment="Start" />
+                    <Slider Value="{Binding Source={x:StaticResource boxColorChangeViewModel2}, Path=Luminosity, Mode=TwoWay}" />
+
+                    <Label Text="{Binding Source={x:StaticResource boxColorChangeViewModel2}, Path=Alpha, StringFormat='Alpha : {0:F3}'}"
+                   Padding="0, 20, 0, 0"
+                   HorizontalTextAlignment="Start" />
+                    <Slider Value="{Binding Source={x:StaticResource boxColorChangeViewModel2}, Path=Alpha, Mode=TwoWay}" />
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

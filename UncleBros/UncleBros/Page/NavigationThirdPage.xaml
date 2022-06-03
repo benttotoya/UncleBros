@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.NavigationThirdPage">
+
+    <NavigationPage.TitleView>
+        <Label Text="ThirdPage"
+               TextColor="#fff"
+               FontAttributes="Bold"
+               HorizontalOptions="End"
+               Margin="0, 0, 20, 0"/>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#ff0" Margin="20">
+            <Label Text="ThirdPage"
+                   HorizontalOptions="Center"
+                   BackgroundColor="#f00"
+                   Padding="20"
+                   TextColor="#fff"
+                   FontAttributes="Bold"
+                   FontSize="30"/>
+            <Button x:Name="btnSecondPage"
+                    Text="Go to Second Page"
+                    VerticalOptions="EndAndExpand"
+                    Margin="20"
+                    Clicked="btnPageMove_Clicked"/>
+            <Button x:Name="btnMainPage"
+                    Text="Go to Main Page"
+                    VerticalOptions="EndAndExpand"
+                    Margin="20"
+                    Clicked="btnPageMove_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

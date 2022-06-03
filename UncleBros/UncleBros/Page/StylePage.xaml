@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.StylePage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <StackLayout Padding="0, 0, 0, 10">
+                <Label Text="Main Title"
+                   TextColor="{StaticResource Key=AppColorWhite}"
+                   FontSize="{StaticResource Key=AppFontSize30}"
+                   FontAttributes="{StaticResource Key=AppFontAttributeBold}"
+                   BackgroundColor="{StaticResource Key=AppColorRed}"
+                   Padding="{StaticResource Key=AppPaddingTitle}"
+                   HorizontalTextAlignment="Start"/>
+                <Label Text="Sub Title"
+                   TextColor="{StaticResource Key=AppColorWhite}"
+                   FontSize="{StaticResource Key=AppFontSize25}"
+                   FontAttributes="{StaticResource Key=AppFontAttributeBold}"
+                   BackgroundColor="{StaticResource Key=AppColorBrown}"
+                   Padding="{StaticResource Key=AppPaddingSubTitle}"
+                   HorizontalTextAlignment="Start"/>
+                <Label Text="자마린(Xamarin)은 2011년 5월, Mono, MonoTouch, Mono fo Android 개발자인 미구엘 더 이카사에 의해 설립된 기업이다."
+                   TextColor="{StaticResource Key=AppColorWhite}"
+                   FontSize="{StaticResource Key=AppFontSize15}"
+                   FontAttributes="{StaticResource Key=AppFontAttributeItalic}"
+                   BackgroundColor="{StaticResource Key=AppColorBlackBrown}"
+                   Padding="{StaticResource Key=AppPaddingContents}"
+                   HorizontalTextAlignment="Start"/>
+                <Button Text="More"
+                    TextColor="{StaticResource Key=AppColorBlack}"
+                    FontSize="{StaticResource Key=AppFontSize15}"
+                    FontAttributes="{StaticResource Key=AppFontAttributeBold}"
+                    BackgroundColor="{StaticResource Key=AppColorSky}"
+                    Padding="{StaticResource Key=AppPadding10}"
+                    HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <StackLayout Padding="0, 0, 0, 10">
+                <Label Text="Main Title"
+                   TextColor="{StaticResource Key=AppColorWhite}"
+                   FontSize="{StaticResource Key=AppFontSize30}"
+                   FontAttributes="{StaticResource Key=AppFontAttributeBold}"
+                   BackgroundColor="{StaticResource Key=AppColorRed}"
+                   Padding="{StaticResource Key=AppPaddingTitle}"/>
+                <Label Text="Sub Title"
+                   TextColor="{StaticResource Key=AppColorWhite}"
+                   FontSize="{StaticResource Key=AppFontSize25}"
+                   FontAttributes="{StaticResource Key=AppFontAttributeBold}"
+                   BackgroundColor="{StaticResource Key=AppColorBrown}"
+                   Padding="{StaticResource Key=AppPaddingSubTitle}"/>
+                <Label Text="이러한 3개의 소프트웨어는 공통 언어 기반으로 크로스 플랫폼을 구현하기 위해 만들어졌다."
+                   TextColor="{StaticResource Key=AppColorWhite}"
+                   FontSize="{StaticResource Key=AppFontSize15}"
+                   FontAttributes="{StaticResource Key=AppFontAttributeItalic}"
+                   BackgroundColor="{StaticResource Key=AppColorBlackBrown}"
+                   Padding="{StaticResource Key=AppPaddingContents}"/>
+                <Button Text="More"
+                    HorizontalOptions="EndAndExpand"
+                    TextColor="{StaticResource Key=AppColorBlack}"
+                    FontSize="{StaticResource Key=AppFontSize15}"
+                    FontAttributes="{StaticResource Key=AppFontAttributeBold}"
+                    BackgroundColor="{StaticResource Key=AppColorSky}"
+                    Padding="{StaticResource Key=AppPadding10}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

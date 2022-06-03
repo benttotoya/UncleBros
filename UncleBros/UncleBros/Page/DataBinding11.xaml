@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.DataBinding11">
+    <ContentPage.Content>
+        <StackLayout Padding="20" BackgroundColor="#f88"
+                     BindingContext="{x:Reference Name=slider01}">
+            <Label x:Name="lbl01"
+                   Text="Welcome to Xamarin.Forms!"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   BackgroundColor="#fff"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   Padding="{Binding Path=Value}"/>
+            <Label x:Name="lbl02"
+                   Text="Welcome to Xamarin.Forms!"
+                   FontAttributes="Bold"
+                   BackgroundColor="#fff"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   BindingContext="{x:Reference Name=slider01}"
+                   FontSize="{Binding Path=Value}"/>
+            <Label x:Name="lbl03"
+                   Text="Welcome to Xamarin.Forms!"
+                   FontAttributes="Bold"
+                   BackgroundColor="#fff"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   FontSize="{Binding Source={x:Reference Name=slider01}, Path=Value}"/>
+            <Slider x:Name="slider01"
+                    HorizontalOptions="FillAndExpand"
+                    Maximum="100"
+                    Minimum="0"/>
+            <Slider x:Name="slider02"
+                    HorizontalOptions="FillAndExpand"
+                    Maximum="100"
+                    Minimum="0"
+                    Value="{Binding Source={x:Reference slider01}, Path=Value, Mode=TwoWay}"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

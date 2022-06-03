@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.DateTimePickerPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="Beige" Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20, 10, 0, 0">
+                <DatePicker x:Name="datePicker" Format="yyyy-MM-dd" MinimumDate="1970-01-01" MaximumDate="2023-01-01" DateSelected="Date_Selected"/>
+                <TimePicker x:Name="timePicker" Format="HH:mm:ss" PropertyChanged="Time_Changed"/>
+            </StackLayout>
+            <StackLayout BackgroundColor="Gold" Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20, 10, 0, 0">
+                <Label x:Name="lblDateTime" Text=""/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

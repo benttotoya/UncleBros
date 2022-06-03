@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.PopupPromptPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Beige">
+            <Button x:Name="btnAlert" Text="Alert Button" Margin="30, 30, 30, 0" Clicked="Button_Clicked" />
+            <Button x:Name="btnYesOrNo" Text="YesOrNo Button" Margin="30, 0, 30, 0" Clicked="Button_Clicked" />
+            <Button x:Name="btnSelect" Text="Select Button" Margin="30, 0, 30, 0" Clicked="Button_Clicked" />
+            <Button x:Name="btnPrompt" Text="Prompt Button" Margin="30, 0, 30, 0" Clicked="Button_Clicked" IsEnabled="False" />
+            <Label x:Name="lblPrompt" BackgroundColor="Gold" Margin="30, 20, 30, 0" Padding="30" IsEnabled="False" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

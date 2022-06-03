@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.MVVM_DateTime01"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             Padding="20">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='The Datetime.Now is {0}'}"
+                       FontSize="29"
+                       TextColor="{StaticResource Key=AppColorBlack}"
+                       HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout BindingContext="{x:Static sys:DateTime.Now}">
+                <Label Text="{Binding Year, Source={x:Static sys:DateTime.Now}, StringFormat='The Year is {0}'}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='The Month is {0:MMMM}'}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding Day, StringFormat='The Day is {0}'}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding StringFormat='The time is {0:T}'}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

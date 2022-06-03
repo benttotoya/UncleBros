@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.StyleInheritancePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="Margin" Value="{StaticResource Key=AppPadding10}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=AppColorPink}"/>
+            </Style>
+            <Style x:Key="baseButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource Key=AppColorBlackBlue}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=AppColorDarkYellow}"/>
+            </Style>
+
+            <Style x:Key="inheritLabel" TargetType="Label" BasedOn="{StaticResource Key=baseStyle}">
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="TextColor" Value="{StaticResource Key=AppColorSky}"/>
+            </Style>
+
+            <Style x:Key="inheritButton" TargetType="Button" BasedOn="{StaticResource Key=baseStyle}">
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="TextColor" Value="{StaticResource Key=AppColorSky}"/>
+            </Style>
+
+            <Style x:Key="mainButton" TargetType="Button" BasedOn="{StaticResource Key=baseButtonStyle}">
+                <Setter Property="Margin" Value="30"/>
+                <Setter Property="Padding" Value="{StaticResource Key=AppPaddingTitle}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Inherited Views" Padding="10"/>
+            <Label Text="Inherited Label Based On BaseStyle" Style="{StaticResource Key=inheritLabel}"/>
+            <Button Text="Inherited Button Based On BaseStyle" Style="{StaticResource Key=inheritButton}"/>
+            <Button Text="Inherited Button Based On baseButtonStyle" Style="{StaticResource Key=mainButton}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

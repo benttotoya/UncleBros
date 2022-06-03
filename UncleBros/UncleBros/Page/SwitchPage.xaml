@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.SwitchPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="★Select favorite food★" FontSize="18" TextColor="Violet" Margin="30, 10, 0, 0"/>
+            <StackLayout Orientation="Horizontal" BackgroundColor="#ff0">
+                <Label x:Name="lblHamburger" Text="Hamburger" FontSize="17" Margin="50, 10, 10, 10"/>
+                <Switch x:Name="swtHamburger" BackgroundColor="Lime" HorizontalOptions="EndAndExpand" Toggled="SwitchToggled"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" BackgroundColor="#ff0">
+                <Label x:Name="lblFrenchfries" Text="French fries" FontSize="17" Margin="50, 10, 10, 10"/>
+                <Switch x:Name="swtFrenchfries" BackgroundColor="Lime" HorizontalOptions="EndAndExpand" Toggled="SwitchToggled"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" BackgroundColor="#ff0">
+                <Label x:Name="lblDrink" Text="Drink" FontSize="17" Margin="50, 10, 10, 10"/>
+                <Switch x:Name="swtDrink" BackgroundColor="Lime" HorizontalOptions="EndAndExpand" Toggled="SwitchToggled"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" BackgroundColor="Bisque">
+                <Label x:Name="lblSelectedMenu" FontSize="18" Margin="50, 10, 10, 10"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

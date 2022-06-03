@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.MVVM_DateTime02">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label x:Name="lbl01"
+                       Text="1"
+                       FontSize="29"
+                       TextColor="{StaticResource Key=AppColorBlack}"
+                       HorizontalTextAlignment="Center"/>
+                <Label x:Name="lbl02"
+                       Text="2"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"/>
+                <Label x:Name="lbl03"
+                       Text="3"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"/>
+                <Label x:Name="lbl04"
+                       Text="4"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"/>
+                <Label x:Name="lbl05"
+                       Text="5"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

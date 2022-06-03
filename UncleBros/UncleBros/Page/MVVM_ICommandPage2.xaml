@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.MVVM_ICommandPage2"
+             xmlns:localViewModel="clr-namespace:UncleBros.ViewModel"
+             Padding="20"
+             BackgroundColor="#555">
+    <ContentPage.BindingContext>
+        <localViewModel:CommandTemperature2ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="0, 40, 0, 0">
+            <Label Text="Device #01 : Enter the temperature you want."
+                   TextColor="#fff"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="Center"/>
+            <StackLayout Orientation="Horizontal"
+                         Padding="0, 10, 0, 0"
+                         HorizontalOptions="StartAndExpand">
+                <Button Text="-"
+                        TextColor="#000"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        Command="{Binding DecreaseTemperatureCommand}"/>
+                <Label Text="{Binding Path=Temperature, StringFormat='{0}'}"
+                       TextColor="{Binding TemperatureColor}"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       BackgroundColor="#fff"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                <Button Text="+"
+                        TextColor="#000"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        Command="{Binding IncreaseTemperatureCommand}"/>
+                <Button Text="ENTER"
+                        TextColor="#000"
+                        FontSize="15"
+                        FontAttributes="Bold"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

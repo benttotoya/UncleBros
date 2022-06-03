@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.StaticResourceDictionaryPage"
+             Padding="10">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="RDBackgroundColorRed">#f00</Color>
+            <Color x:Key="RDBackgroundColorGreen">#0f0</Color>
+            <Color x:Key="RDBackgroundColorBlue">#00f</Color>
+            <Color x:Key="RDTextColorWhite">#fff</Color>
+            
+            <x:Double x:Key="RDPaddingBig">20</x:Double>
+            <x:Double x:Key="RDPaddingMiddle">15</x:Double>
+            <x:Double x:Key="RDPaddingSmall">10</x:Double>
+
+            <x:Double x:Key="RDFontSizeBig">20</x:Double>
+            <x:Double x:Key="RDFontSizeMiddle">15</x:Double>
+            <x:Double x:Key="RDFontSizeSmall">10</x:Double>
+
+            <FontAttributes x:Key="RDFontAttributeBold">Bold</FontAttributes>
+            <FontAttributes x:Key="RDFontAttributeItalic">Italic</FontAttributes>
+            <FontAttributes x:Key="RDFontAttributeBoldItalic">Bold, Italic</FontAttributes>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#ff0">
+            <Label x:Name="label01"
+                   Text="Hello Xamarin"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="{StaticResource Key=AppColorRed}"
+                   Padding="{StaticResource Key=RDPaddingBig}"
+                   FontAttributes="{StaticResource Key=RDFontAttributeBold}"
+                   FontSize="{StaticResource Key=RDFontSizeBig}"
+                   TextColor="{StaticResource Key=RDTextColorWhite}"/>
+            <Button x:Name="btn01"
+                    Text="BUTTON1"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="{StaticResource Key=RDBackgroundColorRed}"
+                    Padding="{StaticResource Key=RDPaddingBig}"
+                    FontAttributes="{StaticResource Key=RDFontAttributeBoldItalic}"
+                    FontSize="{StaticResource Key=RDFontSizeBig}"
+                    TextColor="{StaticResource Key=RDTextColorWhite}"/>
+
+            <Label x:Name="label02"
+                   Text="Hello Xamarin"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="{StaticResource Key=RDBackgroundColorGreen}"
+                   Padding="{StaticResource Key=RDPaddingMiddle}"
+                   FontAttributes="{StaticResource Key=RDFontAttributeBold}"
+                   FontSize="{StaticResource Key=RDFontSizeMiddle}"
+                   TextColor="{StaticResource Key=RDTextColorWhite}"/>
+            <Button x:Name="btn02"
+                    Text="BUTTON2"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="{StaticResource Key=RDBackgroundColorGreen}"
+                    Padding="{StaticResource Key=RDPaddingMiddle}"
+                    FontAttributes="{StaticResource Key=RDFontAttributeBoldItalic}"
+                    FontSize="{StaticResource Key=RDFontSizeMiddle}"
+                    TextColor="{StaticResource Key=RDTextColorWhite}"/>
+
+            <Label x:Name="label03"
+                   Text="Hello Xamarin"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="{StaticResource Key=RDBackgroundColorBlue}"
+                   Padding="{StaticResource Key=RDPaddingSmall}"
+                   FontAttributes="{StaticResource Key=RDFontAttributeBold}"
+                   FontSize="{StaticResource Key=RDFontSizeSmall}"
+                   TextColor="{StaticResource Key=RDTextColorWhite}"/>
+            <Button x:Name="btn03"
+                    Text="BUTTON3"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="{StaticResource Key=RDBackgroundColorBlue}"
+                    Padding="{StaticResource Key=RDPaddingSmall}"
+                    FontAttributes="{StaticResource Key=RDFontAttributeBoldItalic}"
+                    FontSize="{StaticResource Key=RDFontSizeSmall}"
+                    TextColor="{StaticResource Key=RDTextColorWhite}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

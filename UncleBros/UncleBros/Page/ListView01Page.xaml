@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.ListView01Page"
+             Padding="15">
+    <ContentPage.Content>
+        <!--
+            <StackLayout x:Name="stackLayout01">
+            <ListView x:Name="ListView01"
+                      ItemTapped="OnItemTapped"
+                      ItemSelected="OnItemSelected"
+                      SelectedItem="{Binding Source={x:Reference stackLayout01}, Path=BackgroundColor}">
+                <ListView.ItemsSource>
+                    <x:Array Type="{Type Color}">
+                        <Color>#000</Color>
+                        <Color>#00f</Color>
+                        <Color>#0f0</Color>
+                        <Color>#0ff</Color>
+                        <Color>#f00</Color>
+                        <Color>#f0f</Color>
+                        <Color>#ff0</Color>
+                        <Color>#fff</Color>
+                    </x:Array>
+                </ListView.ItemsSource>
+            </ListView>
+        </StackLayout>
+        -->
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.MVVM_InteractivePage"
+             xmlns:localViewModel="clr-namespace:UncleBros.ViewModel"
+             Padding="20"
+             BackgroundColor="#777">
+    
+    <ContentPage.BindingContext>
+        <localViewModel:ColorChangeViewModel CurrentColor="Aqua"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView Color="{Binding CurrentColor}"
+                     VerticalOptions="FillAndExpand" />
+            <Label Text="HUE"
+                   Padding="0, 20, 0, 0"
+                   HorizontalOptions="StartAndExpand"/>
+            <Slider Value="{Binding Hue, StringFormat='Hue = {0:F2}', Mode=TwoWay}" />
+            <Label Text="Saturation"
+                   Padding="0, 20, 0, 0"
+                   HorizontalOptions="StartAndExpand"/>
+            <Slider Value="{Binding Saturation, StringFormat='Saturation = {0:F2}', Mode=TwoWay}" />
+            <Label Text="Luminosity"
+                   Padding="0, 20, 0, 0"
+                   HorizontalOptions="StartAndExpand"/>
+            <Slider Value="{Binding Luminosity, StringFormat='Luminosity = {0:F2}', Mode=TwoWay}" />
+            <Label Text="Alpha"
+                   Padding="0, 20, 0, 0"
+                   HorizontalOptions="StartAndExpand"/>
+            <Slider Value="{Binding Alpha, StringFormat='Alpha = {0:F2}', Mode=TwoWay}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

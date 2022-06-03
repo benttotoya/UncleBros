@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localViewModel="clr-namespace:UncleBros.ViewModel"
+             x:Class="UncleBros.Page.MVVM_DateTime04">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <localViewModel:RealTimeViewModel x:Key="realTimeViewModel"/>
+            <localViewModel:CurrentTimeViewModel x:Key="currentTimeViewModel"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Source={x:StaticResource Key=currentTimeViewModel}, Path=DateTime}"
+                   FontSize="30"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand" />
+            <Label Text="{Binding Source={x:StaticResource realTimeViewModel}, Path=DateTimeProperty}"
+                   FontSize="30"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.DataBinding01">
+    <ContentPage.Content>
+        <StackLayout Margin="30, 30, 30, 0" Padding="20" BackgroundColor="#f88">
+            <Label x:Name="lblWelcome"
+                   Text="Welcome to the hell."
+                   Background="#fff"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+            <Label x:Name="lblLanguage"
+                   Text="Xamarin"
+                   Background="#fff"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <!-- Maximum을 Mininum보다 먼저 지정하지 않으면 예외발생 -->
+            <Slider x:Name="slider1"
+                    Maximum="40"    
+                    Minimum="10"
+                    DragCompleted="Event_SliderDragCompleted"
+                    ValueChanged="Event_SliderDragChanged"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.MVVM_IConverter3Page"
+             xmlns:localViewModel="clr-namespace:UncleBros.ViewModel"
+             Padding="20">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="20">
+                <Label Text="Subscribe?"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Start"/>
+                <Switch x:Name="switchSubscribe"
+                        HorizontalOptions="Start"/>
+                <Label FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Start">
+                    <Label.Text>
+                        <Binding Source="{x:Reference switchSubscribe}"
+                                 Path="IsToggled">
+                            <Binding.Converter>
+                                <localViewModel:BoolToGenericTConverterViewModel x:TypeArguments="x:String" 
+                                                                                 TrueObject="OK" 
+                                                                                 FalseObject="Nob"/>
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.Text>
+                </Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Padding="20">
+                <Label Text="Allow popups?"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Start"/>
+                <Switch x:Name="switchAllowPopup"
+                        HorizontalOptions="Start"/>
+                <Label FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Start">
+                    <Label.Text>
+                        <Binding Source="{x:Reference switchAllowPopup}" Path="IsToggled">
+                            <Binding.Converter>
+                                <localViewModel:BoolToGenericTConverterViewModel x:TypeArguments="x:String"
+                                                                                 TrueObject="Yes. Popup Come on!"
+                                                                                 FalseObject="No. Get away~"/>
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.Text>
+                    <Label.TextColor>
+                        <Binding Source="{x:Reference switchAllowPopup}" Path="IsToggled">
+                            <Binding.Converter>
+                                <localViewModel:BoolToGenericTConverterViewModel x:TypeArguments="Color"
+                                                                                 TrueObject="#30f"
+                                                                                 FalseObject="#f50"/>
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.TextColor>
+                </Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Night mode"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalOptions="EndAndExpand"/>
+                <Switch x:Name="switchNightMode"
+                        HorizontalOptions="End"/>
+            </StackLayout>
+            <Label Text="Data binding is the art of associating the properties of two objects so that changes in one property are automatically reflected in the other. Data binding is an integral part of the Model-View-ViewModel (MVVM) application architecture.
+                         A Xamarin.Forms application consists of one or more pages, each containing several user interface objects called 'views'. One of the main tasks of the program is to keep these views in sync and keep track of the various values or selections that appear there. Views often represent values from the underlying data source, and users manipulate those views to change that data. When the view changes, the underlying data must reflect the change, and similarly, when the underlying data changes, the view must reflect the change. In order to successfully handle this operation, the program must be notified of changes to these views or the underlying data. A common solution is to define an event that will signal when a change occurs. You can then install event handlers to notify you of these changes. It responds by sending data from one object to another. However, if you have many views, you also need to have many event handlers and a lot of code involved."
+                   FontSize="15"
+                   Padding="20"
+                   HorizontalTextAlignment="Start"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Fill">
+                <Label.TextColor>
+                    <Binding Source="{x:Reference switchNightMode}" Path="IsToggled">
+                        <Binding.Converter>
+                            <localViewModel:BoolToGenericTConverterViewModel x:TypeArguments="Color"
+                                                                             TrueObject="#fff"
+                                                                             FalseObject="#000"/>
+                        </Binding.Converter>
+                    </Binding>
+                </Label.TextColor>
+                
+                <Label.BackgroundColor>
+                    <Binding Source="{x:Reference switchNightMode}" Path="IsToggled">
+                        <Binding.Converter>
+                            <localViewModel:BoolToGenericTConverterViewModel x:TypeArguments="Color"
+                                                                             TrueObject="#000"
+                                                                             FalseObject="#fff"/>
+                        </Binding.Converter>
+                    </Binding>
+                </Label.BackgroundColor>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
