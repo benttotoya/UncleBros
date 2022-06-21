@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.View.StudentContentsView"
+             xmlns:localImages="clr-namespace:UncleBros.Images">
+    <ContentView.Content>
+        <StackLayout Orientation="Horizontal">
+            <StackLayout>
+                <Image x:Name="park" Source="{localImages:EmbeddedImage ResourceId=UncleBros.Images.Park.png}" WidthRequest="50" HeightRequest="50"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding Id, StringFormat='ID: {0} | '}" FontSize="15" FontAttributes="Bold"/>
+                    <Label Text="{Binding Name, StringFormat='Name: {0} | '}" FontSize="15" FontAttributes="Bold"/>
+                    <Label Text="{Binding Major, StringFormat='Major: {0}'}" FontSize="15" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding Gender, StringFormat='Gender: {0} | '}" />
+                    <Label Text="{Binding Grade, StringFormat='Grade: {0} | '}" />
+                    <Label Text="{Binding Age, StringFormat='Age: {0}'}" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

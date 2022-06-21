@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.PickerPage"
+             xmlns:localView="clr-namespace:UncleBros.View"
+             Padding="15">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" BackgroundColor="#ccc">
+                <Label Text="Please select a grade." FontSize="15" FontAttributes="Bold" Margin="10"/>
+                <Picker x:Name="gradePicker"
+                        Title="Select you want number."
+                        TitleColor="#fff"
+                        TextColor="#000"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center"
+                        WidthRequest="100"
+                        SelectedIndexChanged="gradePicker_SelectedIndexChanged"
+                        HorizontalOptions="EndAndExpand"
+                        Margin="0, 0, 10, 0">
+                    <Picker.Items>
+                        <x:String>1. 일</x:String>
+                        <x:String>2. 이</x:String>
+                        <x:String>3. 삼</x:String>
+                        <x:String>4. 사</x:String>
+                        <x:String>5. 오</x:String>
+                        <x:String>6. 육</x:String>
+                        <x:String>7. 칠</x:String>
+                        <x:String>8. 팔</x:String>
+                        <x:String>9. 구</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout>
+                <Label x:Name="selectedItemLabel"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       BackgroundColor="#aaa"
+                       Padding="10"
+                       HorizontalTextAlignment="Start"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

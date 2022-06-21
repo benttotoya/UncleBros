@@ -2,5 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.unclebros" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
 	<uses-permission android:name="android.permission.INTERNET" />
-	<application android:label="UncleBros.Android" android:theme="@style/MainTheme" android:usesCleartextTraffic="true"></application>
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.FLASHLIGHT" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<application android:label="UncleBros.Android" android:theme="@style/MainTheme" android:usesCleartextTraffic="true">
+	</application>
+	<queries>
+		<intent>
+			<action android:name="android.intent.action.DIAL" />
+			<data android:scheme="tel"/>
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.VIEW" />
+			<data android:scheme="smsto"/>
+		</intent>
+	</queries>
 </manifest>

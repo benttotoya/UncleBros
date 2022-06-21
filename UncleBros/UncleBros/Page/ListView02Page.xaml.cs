@@ -13,18 +13,21 @@ namespace UncleBros.Page
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListView02Page : ContentPage
     {
+        /*
         int studentId = 0;
         string[] arrName = new string[] {"Kim", "Lee", "Park", "Choi", "Kang", "Ko", "Bu"};
         string[] arrMajor = new string[] {"Korean", "Japanese", "Chinese", "English", "Computer", "Science" };
         char[] arrGender = new char[] {'M', 'W' };
         string[] arrGrade = new string[] {"A+", "A", "B+", "B", "C+", "C", "D+", "D", "F"};
         int[] arrAge = new int[] { 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30};
+        */
 
 
         public ListView02Page()
         {
             InitializeComponent();
 
+            /*
             ObservableCollection<Student> students = new ObservableCollection<Student>();
 
             Device.StartTimer(TimeSpan.FromSeconds(1), () =>
@@ -43,6 +46,17 @@ namespace UncleBros.Page
             });
 
             listView01.ItemsSource = students;
+            */
+        }
+
+        private void listView01_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+
+        }
+
+        private void listView01_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
         }
     }
 }

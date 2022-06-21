@@ -57,7 +57,16 @@ namespace UncleBros
             //MainPage = new MVVM_IConverter2Page();
             //MainPage = new MVVM_IConverter3Page();
             //MainPage = new ListView01Page();
-            MainPage = new ListView02Page();
+            //MainPage = new ListView02Page();
+            //MainPage = new ListView03Page();
+            //MainPage = new PickerPage();
+            //MainPage = new Picker2Page();
+            //MainPage = new SQLiteforTodoPage();
+            //MainPage = new EssentialPage();
+            //MainPage = new Essential2Page();
+            //MainPage = new Essential3Page();
+            //MainPage = new Essential4Page();
+            MainPage = new Essential5Page();
         }
 
         protected override void OnStart()

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.SQLiteforTodoPage">
+    <ContentPage.Content>
+        <StackLayout Padding="15, 0, 15, 15">
+            <!-- Title -->
+            <StackLayout>
+                <Label Text="To-Do List"
+                   TextColor="#fff"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   BackgroundColor="#08f"
+                   HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center"
+                   Padding="10"/>
+            </StackLayout>
+            
+            <!-- Item List -->
+            <StackLayout BackgroundColor="#fff"
+                         Padding="0, 15, 0 ,0"
+                         VerticalOptions="End">
+                <ListView x:Name="todoListView" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <!-- Time -->
+                                    <StackLayout>
+                                        <Label Text="{Binding RecordTime}"
+                                               FontSize="10"/>
+                                    </StackLayout>
+
+                                    <!-- Item Info -->
+                                    <StackLayout Orientation="Horizontal"
+                                                 VerticalOptions="CenterAndExpand"
+                                                 Spacing="0">
+                                        <Entry x:Name="entryTodo"
+                                               Text="{Binding Title}"
+                                               FontAttributes="Bold"
+                                               HorizontalOptions="FillAndExpand"/>
+                                        <Button Text="MOD"
+                                                FontAttributes="Bold"
+                                                WidthRequest="60"
+                                                HorizontalOptions="End"
+                                                Clicked="OnTodoModifyButton_Clicked"/>
+                                        <Button Text="DEL"
+                                                FontAttributes="Bold"
+                                                WidthRequest="60"
+                                                HorizontalOptions="End"
+                                                Clicked="OnTodoDeleteButton_Clicked"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            
+            <!-- New To-Do -->
+            <StackLayout BackgroundColor="#ccf"
+                         VerticalOptions="EndAndExpand">
+                <Label Text="New-To-Do"
+                       TextColor="#08f"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       Padding="10"/>
+                <Entry x:Name="entryTodo"
+                       Placeholder="Enter new To-Do"
+                       FontSize="15"
+                       FontAttributes="Bold"/>
+                <Button x:Name="btnSave"
+                        Text="SAVE NEW TO-DO"
+                        TextColor="#fff"
+                        FontSize="15"
+                        FontAttributes="Bold"
+                        BackgroundColor="#f51"
+                        Clicked="OnTodoInsertButton_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

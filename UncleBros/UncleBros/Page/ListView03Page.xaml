@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UncleBros.Page.ListView03Page"
+             xmlns:localViewModel="clr-namespace:UncleBros.ViewModel"
+             xmlns:localContentsView="clr-namespace:UncleBros.View"
+             xmlns:localProject="clr-namespace:UncleBros"
+             Padding="15">
+
+    <ContentPage.BindingContext>
+        <localViewModel:Student2ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Path=Students}"
+                      RowHeight="50"
+                      ItemTapped="ListView_ItemTapped"
+                      ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <localContentsView:StudentContentsView />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
